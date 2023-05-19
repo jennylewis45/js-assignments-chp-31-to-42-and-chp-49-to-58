@@ -1,0 +1,181 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Signup Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .summary {
+      max-height: 100px;
+      overflow: hidden;
+    }
+
+  
+  </style>
+<body>
+  <h2>Signup Form</h2>
+
+  <form id="signupForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <h3 id="output"></h3>
+
+
+
+  <h2>Item Details</h2>
+
+  <div class="item">
+    <h3>Item 1</h3>
+    <div class="summary">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit, odio vel convallis eleifend, nisi mi tincidunt arcu, non ullamcorper elit odio nec felis.</p>
+    </div>
+    <button class="read-more">Read more</button>
+    <div class="full-details" style="display: none;">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit, odio vel convallis eleifend, nisi mi tincidunt arcu, non ullamcorper elit odio nec felis. Morbi a interdum ipsum. Proin et purus et arcu interdum eleifend eu ut dolor. Fusce efficitur, arcu a pharetra posuere, nisl mauris blandit dolor, et efficitur urna magna in dui.</p>
+    </div>
+  </div>
+
+  <div class="item">
+    <h3>Item 2</h3>
+    <div class="summary">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit, odio vel convallis eleifend, nisi mi tincidunt arcu, non ullamcorper elit odio nec felis.</p>
+    </div>
+    <button class="read-more">Read more</button>
+    <div class="full-details" style="display: none;">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit, odio vel convallis eleifend, nisi mi tincidunt arcu, non ullamcorper elit odio nec felis. Morbi a interdum ipsum. Proin et purus et arcu interdum eleifend eu ut dolor. Fusce efficitur, arcu a pharetra posuere, nisl mauris blandit dolor, et efficitur urna magna in dui.</p>
+    </div>
+  </div>
+ 
+
+<p id="zoom-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius mattis tellus, eu accumsan odio efficitur vitae. Proin in nisi eu urna pellentesque posuere. Aenean posuere massa at justo suscipit, ut bibendum turpis vestibulum. Curabitur nec nibh velit. Sed efficitur interdum felis, id condimentum ligula euismod eu. Nullam non sem eu nulla vestibulum mattis vel sed neque. Mauris elementum, odio in tristique dictum, nibh leo tristique mi, in ullamcorper nisl ex nec massa. Proin condimentum dictum turpis, vitae auctor orci aliquam sit amet. Nam fringilla, dui ut hendrerit consectetur, mi elit semper urna, in sagittis velit ex in lacus. Nulla sodales, dui ut sagittis ultricies, dolor nunc euismod metus, a sagittis purus lectus sed metus.</p>
+
+<button id="zoom-in-btn">Zoom In (+)</button>
+<button id="zoom-out-btn">Zoom Out (-)</button>
+
+    
+
+<div class="mainTable">
+  <h1>Data</h1>
+  <table id="table" border="1">
+      
+      <tr>
+          <th>Sno</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Country</th>
+          <th>Mobile number</th>
+      </tr>
+      
+      <tr>
+          <td>01</td>
+          <td>Michael </td>
+          <td>Davidson</td>
+          <td>United State</td>
+          <td>123456789</td>
+      </tr>
+      
+      <tr>
+          <td>02</td>
+          <td>Jim </td>
+          <td>Vito</td>
+          <td>Thailand</td>
+          <td>987654321</td>
+      </tr>
+      
+      <tr>
+          <td>03</td>
+          <td>Tom </td>
+          <td>Johnson</td>
+          <td>France</td>
+          <td>568925795</td>
+      </tr>
+      
+      <tr>
+          <td>04</td>
+          <td>Peter  </td>
+          <td>Lewis</td>
+          <td>Germany</td>
+          <td>437496478</td>
+      </tr>
+      
+      <tr>
+          <td>05</td>
+          <td>Edward </td>
+          <td>Koeing</td>
+          <td>Argentina</td>
+          <td>764326899</td>
+      </tr>
+      
+      <tr>
+          <td>06</td>
+          <td>Jeck </td>
+          <td>Preston</td>
+          <td>Canada</td>
+          <td>578854268</td>
+      </tr>
+      
+      <tr>
+          <td>07</td>
+          <td>David </td>
+          <td>Smith</td>
+          <td>Australia</td>
+          <td>357882579</td>
+      </tr>
+      
+      <tr>
+          <td>08</td>
+          <td>Luis </td>
+          <td>Brown</td>
+          <td>Irak</td>
+          <td>468953789</td>
+      </tr>
+      
+      <tr>
+          <td>09</td>
+          <td>Thomas </td>
+          <td>Miller</td>
+          <td>America</td>
+          <td>764589537</td>
+      </tr>
+      
+  </table>
+</div>
+
+
+<div class="updateBtn">
+  <button  onclick="editTableDisplay()">Update data</button>
+</div>
+
+
+<div class="editTable">
+  <div class="left">First Name: </div><div class="right"><input type="text" name="fname" id="fname"></div><br><br>
+  <div class="left">Last Name: </div><div class="right"><input type="text" name="lname" id="lname"></div><br><br>
+  <div class="left">Country: </div><div class="right"><input type="text" name="country" id="country"></div><br><br>
+  <div class="left">Mobile number: </div><div class="right"><input type="number" name="mNumber" id="mNumber"></div><br><br>
+  <button onclick="editRow();" class="editRowBtn">Update</button><br><br>
+</div>        
+
+
+ <script src="index.js"></script>
+ <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+ 
+ 
+  
+
+
