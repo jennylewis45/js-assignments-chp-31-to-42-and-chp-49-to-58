@@ -83,3 +83,35 @@ for(var i = 1; i < table.rows.length; i++){
 function editTableDisplay(){
     document.querySelector('.editTable').setAttribute('style', 'display: block;')
 }
+
+
+var modal = document.getElementById('myModal');
+var modalImg = document.getElementById('modalImg');
+var closeButton = document.getElementsByClassName('close')[0];
+var images = document.getElementsByClassName('myImg');
+
+// Function to open the modal and display the clicked image
+function openModal(event) {
+  modal.style.display = 'block';
+  modalImg.src = event.target.src;
+}
+
+// Function to close the modal
+function closeModal() {
+  modal.style.display = 'none';
+}
+
+// Event listener to open the modal when an image is clicked
+for (var i = 0; i < images.length; i++) {
+  images[i].addEventListener('click', openModal);
+}
+
+// Event listener to close the modal when the close button is clicked
+closeButton.addEventListener('click', closeModal);
+
+// Event listener to close the modal when clicking outside the image
+modal.addEventListener('click', function(event) {
+  if (event.target == modal) {
+    closeModal();
+  }
+});
