@@ -14,6 +14,19 @@ form.addEventListener('submit', function (event) {
 });
 
 
+
+
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+  
+  <!-- Add multiple images with the "myImg" class -->
+  <img class="myImg" src="img2.jfif">
+  <img class="myImg" src="82.jpg">
+    <img class="myImg" src="img1.jfif">
+
+
 const readMoreButtons = document.querySelectorAll('.read-more');
 
 
